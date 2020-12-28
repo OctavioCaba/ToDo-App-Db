@@ -9,9 +9,12 @@ for (let i = 0; i < completeTaskBtn.length; i++) {
         if (!completeTaskBtn[i].classList.contains('active')) {
             completeTaskBtn[i].classList.add('active');
             completeTaskBtn[i].firstElementChild.style.visibility = 'visible';
+            /* console.log(completeTaskBtn[i].parentElement.children[1].classList.add('done')); */
+            completeTaskBtn[i].parentElement.children[1].classList.add('done');
         } else {
             completeTaskBtn[i].classList.remove('active');
             completeTaskBtn[i].firstElementChild.style.visibility = 'hidden';
+            completeTaskBtn[i].parentElement.children[1].classList.remove('done');
         }
     });
 }

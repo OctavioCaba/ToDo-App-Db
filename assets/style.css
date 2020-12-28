@@ -82,6 +82,10 @@ body {
     }
 }
 
+.card .done {
+    text-decoration: line-through;
+}
+
 .card-create {
     border-radius: 7px;
     display: flex;
