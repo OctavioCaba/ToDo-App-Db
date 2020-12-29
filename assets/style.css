@@ -29,7 +29,8 @@ body {
 }
 
 .container {
-    height: 98vh;
+    min-height: 98vh;
+    max-height: 100%;
 }
 
 /* HEADER */
@@ -100,11 +101,26 @@ body {
     color: var(--Color-Font);
 }
 
+.card-create .form-create {
+    display: flex;
+    width: 100%;
+}
+
+.form-create .create-task {
+    text-align: right;
+    margin-bottom: -20px;
+}
+
 .card-create .create-task-btn {
     padding: 11px;
+    margin-top: 5px;
     border-radius: 900px;
     border: 2px solid var(--Color-Secondary);
     background-color: var(--Color-Primary);
+}
+
+.card-create .create-task-btn:hover {
+    background-color: var(--Color-Font);
 }
 
 .card .data-task {
@@ -129,11 +145,14 @@ body {
 .card .complete-task-img,
 .card .delete-task-img {
     padding: 6px;
-    visibility: hidden;
     background-image: url(../images/icon-check.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+}
+
+input[type=submit] {
+    visibility: hidden;
 }
 
 .card .complete-task-btn,
@@ -144,7 +163,6 @@ body {
 
 .delete .delete-task-img {
     background-image: url(../images/icon-cross.svg);
-    visibility: visible;
 }
 
 .card .active {
@@ -159,6 +177,15 @@ body {
     font-size: 12px;
     color: var(--Dark-Grayish-Blue);
     padding: 5px 0;
+}
+
+.actions .clear-completed {
+    text-decoration: none;
+    color: var(--Dark-Grayish-Blue);
+}
+
+.actions .clear-completed:hover {
+    color: var(--Bright-Blue);
 }
 
 /* INPUT */
@@ -191,6 +218,7 @@ body {
 /* FILTERS */
 .last-card {
     border-radius: 7px;
+    margin-bottom: 20px;
 }
 
 .filters-bar {
